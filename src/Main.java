@@ -27,16 +27,14 @@ public class Main {
 
 
         //Task3
-        int period200Years = 1822;
-        int YearTheCometLastFlewBy = 1975;
-        int nextYearTheCometWillArrive = YearTheCometLastFlewBy;
+        int periodFrom = 2022 - 200;
+        int periodUpTo = 2022 + 100;
+        int year;
 
-        nextYearTheCometWillArrive += 79;
-        System.out.println("Комета прилетит в " + nextYearTheCometWillArrive + " году.");
-        while (YearTheCometLastFlewBy >= period200Years) {
-            System.out.println("Комета прилетала в " + YearTheCometLastFlewBy + " году.");
-            YearTheCometLastFlewBy -= 79;
-
+        for (year = periodFrom; year <= periodUpTo; year++) {
+            if (year % 79 == 0) {
+            System.out.println("Комета прилетала или прилетит в " + year + " году.");
+            }
         }
 
     }
